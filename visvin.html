@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <style>
+        body{
+ margin: 0;
+ padding: 0;
+ background: url('Building.jpg');
+ baground-size:cover;
+background-attachment:fixed;
+background-position:center;
+ background-family: sans-serif;
+ background-size: 1500px 900px;
+
+}
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position:fixed;
+    top:0;
+    width:100%;
+    
+}
+
+    </style>
+    <head>
+        <title>Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body background="building.jpg">
+        <ul>
+  <li><a class="active" href="index.html" >LogOut</a></li>
+          </ul>
+        <br><br><br>  
+        <form method="post" action="roomdetails.jsp">
+            <input type="submit" name="submit" value="RoomDetails">
+        </form>
+        <br>
+             <a href="room.html">Enter room Details</a>
+             <br><br> <br>
+       <form method="post" action="studentdetails.jsp">
+            <input type="submit" name="submit" value="StudentDetails">
+        </form>
+        <br>
+ 
+             <a href="student.html">Enter student Details</a>
+             <br><br><br>
+       <form method="post" action="parentdetails.jsp">
+            <input type="submit" name="submit" value="ParentDetails">
+        </form>
+        <br>
+             <a href="parent.html">Enter parent Details</a>
+             <br><br> <br>
+       <form method="post" action="feedetails.jsp">
+            <input type="submit" name="submit" value="FeeDetails">
+        </form>
+        <br>
+             <a href="fee.html">Enter fee Details</a>
+             <br><br><br>
+          <form method="post" action="visitordetails.jsp">
+            <input type="submit" name="submit" value="VisitorDetails"/>
+            <br><br>
+                </form>
+                <a href="visitor.html">Enter Visitor Details</a>
+         <br><br>
+         <br>
+        <form method="post" action="p1.html">
+            <input type="submit" name="submit" value="Delete">
+        </form>
+    </body>
+</html>

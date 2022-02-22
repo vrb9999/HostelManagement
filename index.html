@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login form</title>
+    <style>
+        
+        body{
+ margin: 0;
+ padding: 0;
+ background: url(Building.jpg);
+ baground-size:cover;
+background-attachment:fixed;
+background-position:center;
+ background-family: sans-serif;
+
+}
+
+.loginbox{
+ width: 320px;
+height: 420px;
+background:rgba(0,0,0,0.5);
+color:#fff;
+top:55%;
+left:50%;
+position:absolute;
+transform:translate(-50%,-50%);
+box-sizing:border-box;
+padding:50px ;
+}
+
+
+.loginbox p{
+font-weight:bold;
+font-size:20;
+color:white;
+}
+.loginbox input[type="text"],input[type="password"]{
+border:none;
+border-bottom:1px solid #fff;
+background:transparent;
+outline:none;
+height:40px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position:fixed;
+    top:0;
+    width:100%;
+    
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+    </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+          <ul>
+  <li><a class="active" href="registration.html">Warden Registration</a></li>
+          </ul>  
+         <div class="loginbox">
+           
+            <h1>Login Here</h1>
+             <form  method="post" action="login.jsp" >
+                 <table>
+                        <tr><td> username<input id="a" type="text" name="username" required></td></tr>
+               
+                        <tr><td>password<input id="a" type="password" name="password" ></td></tr>
+      
+                        <tr><td><input type="submit" name="submit" value="login">&nbsp&nbsp&nbsp
+                        <tr><td><input type="reset" value="reset" ></td></tr>
+                 </table>
+            </form>
+         </div>
+    </body>
+</html>

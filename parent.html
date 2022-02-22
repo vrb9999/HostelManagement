@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(form.pwd1.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.pwd1.focus();
+        return false;
+      }
+      if(form.pwd1.value == form.username.value) {
+        alert("Error: Password must be different from Username!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+
+    alert("Registration successful" );
+    return true;
+  }
+
+</script>
+<style>
+      body{
+ margin: 0;
+ padding: 0;
+ background: url('Building.jpg');
+ baground-size:cover;
+background-attachment:fixed;
+background-position:center;
+ background-family: sans-serif;
+ background-size: 1500px 900px;
+
+}
+
+.regbox{
+ width: 450px;
+height: 500px;
+background:#add8e6;/*rgba(0,0,0,0.5) for transparent form*/
+color:#111;
+top:56%;
+left:50%;
+position:absolute;
+transform:translate(-50%,-50%);
+box-sizing:border-box;
+padding:40px ;
+}
+input[id=a]{ width:200px;height:20px;border:2px solid #aaa; border-radius:4px;margin:8px;}
+input[id=b]{ width:200px;height:20px;border:2px solid #aaa; border-radius:4px;margin:8px;}
+select {width:200px;height:20px;border:2px solid #aaa; border-radius:4px;margin:8px;}
+h1{color:"#2c35c9";font-size:50px;text-shadow: 2px 2px 5px green;}
+td{font-size:17px;}
+
+
+</style>    
+        
+    </head>
+    <body>
+       
+<h1><center>Parent Details</center></h1>
+        
+          
+          
+          
+<div class="regbox">
+<form  onsubmit="return checkForm(this);" action="parent.jsp"><table>
+        
+<tr><td>StudentId:</td><td> <input id="b" type="text" name="st_id"></td></tr>
+<tr>
+<td>Fathername:</td>
+<td><input id="a" type="text"  name="fname" required></td>
+</tr>
+<tr>
+<td>Mothername:</td>
+<td><input id="a" type="text" name="mname" required></td>
+<tr>
+<td>Email:</td>
+<td><input id="a" type="email" placeholder="father or mother" name="email" ></td>
+</tr>
+<tr><td>Fathernumber:</td><td><input type="number" size="10" max="9999999999" id="a" name="f_no" required></td></tr>
+<tr><td>Mothernumber:</td><td><input type="number" size="10" max="9999999999" id="a" name="m_no" required></td></tr>
+<tr>
+<td>Address:</td>
+<td><input id="a" type="text"  name="address" ></td>
+</tr>
+</table>
+    <br> <button type ="submit" name="submit">Submit</button>
+             <button type="reset" name="reset" >Reset</button><br>
+</form>
+</div>
+    </body>
+</html>

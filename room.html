@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Room</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+      body{
+ margin: 0;
+ padding: 0;
+ background: url('Building.jpg');
+ baground-size:cover;
+background-attachment:fixed;
+background-position:center;
+ background-family: sans-serif;
+ background-size: 1500px 900px;
+
+}
+.regbox{
+ width: 450px;
+height: 350px;
+background:#add8e6;/*rgba(0,0,0,0.5) for transparent form*/
+color:#111;
+top:56%;
+left:50%;
+position:absolute;
+transform:translate(-50%,-50%);
+box-sizing:border-box;
+padding:40px ;
+}
+input[id=a]{ width:200px;height:20px;border:2px solid #aaa; border-radius:4px;margin:8px;}
+input[id=b]{ width:200px;height:20px;border:2px solid #aaa; border-radius:4px;margin:8px;}
+select {width:200px;height:20px;border:2px solid #aaa; border-radius:4px;margin:8px;}
+h1{color:"#2c35c9";font-size:50px;text-shadow: 2px 2px 5px orange;}
+td{font-size:17px;}
+
+</style>
+
+    </head>
+    <body>
+        <h1><center>Room Details</center></h1>
+        <div class="regbox">
+            <form  onsubmit="return checkForm(this);" action="room.jsp"><table>
+        
+                    <tr><td>StudentId:</td><td> <input id="a"  type="text" name="st_id"></td></tr>
+<tr>
+<td>Room Number:</td>
+<td><input id="a" type="text"  name="room_no" required></td>
+</tr>
+<tr>
+<td>Room Capacity:</td>
+<td><input id="a" type="number" size="10" max="3" min="3"  name="capacity" ></td>
+</tr>
+<tr>
+<td>No.of Students:</td>
+<td><input id="a" type="number" size="3" max="3" min="0" name="no_st" ></td>
+</tr>
+
+                </table>
+                <br> <button type ="submit" name="submit">Submit</button>
+             <button type="reset" name="reset" >Reset</button><br>
+            </form>
+        </div>
+    </body>
+</html>
